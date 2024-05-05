@@ -1,0 +1,80 @@
+package Interview.freshworks;
+
+Given an array of integers arr[], the task is to print a list of all the peaks. A peak is an element in the array which is greater than its neighbouring elements
+        Input: arr[] = {5, 10, 5, 7, 4, 3, 5}
+        Output:
+        Peaks : 10 7 5
+
+/*Given an array of integers arr[], the task is to print a list of all the peaks. A peak is an element in the array which is greater than its neighbouring elements
+Input: arr[] = {5, 10, 5, 7, 4, 3, 5}
+Output:
+Peaks : 10 7 5 */
+
+public class Main {
+    public static void main(String[] args) {
+        int arr[] = {5, 10, 5, 7, 4, 3, 5};
+        if(arr!=null){
+            if (extracted(arr)) return;
+
+            for(int i=1;i<arr.length-2;i++){
+
+                if(arr[i]>arr[i-1] && arr[i]>arr[i+1]){
+                    System.out.print(arr[i] +" ");
+                }
+            }
+
+        }}
+
+    private static boolean extracted(int[] arr) {
+        int arrayLength = arr.length;
+        if(arr.length==1) {
+            System.out.print(arr[0]);
+            return true;
+        }
+
+        if(arr[1]> arr[0]){
+
+            System.out.print(arr[1] +" ");
+        }
+        if(arr[arrayLength-1]> arr[arrayLength-2]){
+
+            System.out.print(arr[arrayLength-1] +" ");
+        }
+        return false;
+    }
+}
+
+Employee
+
+        get v1/User/employee? filter reporting="employeeId"&
+        post v1/User/employee
+        patch v1/User/employee
+        put v1/User/employee
+        delete v1/User/employee
+        get v1/User/employee/1 ?id={1}
+
+        get v1/User/search
+        filter:Hash({name=reddy,orgnaisation="paypal",address="tirupathi"})
+        filter={name=reddy,orgnaisation="paypal",address="tirupathi"}
+
+
+        id,
+        name
+        company
+        Address
+        employeeId
+        organization
+        reportingTo -managerId
+        designation
+
+        select * from Employee
+
+        Leave Table
+
+        id employeeid appliedDate
+
+        not applied last month employee
+
+        select * from Employee where employeid not in( select distinct(employeeid) from Leave)
+
+        v2/
